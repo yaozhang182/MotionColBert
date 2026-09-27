@@ -116,7 +116,7 @@ masking), so their results differ slightly from the paper:
 
 | Dataset | Released checkpoint | T2M R@1 | R@2 | R@3 | R@5 | R@10 | MedR | M2T R@1 | R@2 | R@3 | R@5 | R@10 | MedR |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| HumanML3D | `motioncolbert_l_humanml3d.pt` | coming soon | | | | | | | | | | | |
+| HumanML3D | `motioncolbert_l_humanml3d.pt` | 13.76 | 18.98 | 25.65 | 33.72 | 46.87 | 12.0 | 14.86 | 18.82 | 25.61 | 33.26 | 44.17 | 14.0 |
 | KIT-ML    | `motioncolbert_l_kit.pt` | 15.30 | 25.54 | 33.86 | 45.66 | 59.04 | 7.0 | 16.51 | 17.95 | 28.43 | 36.39 | 52.89 | 9.0 |
 
 ## Citation
