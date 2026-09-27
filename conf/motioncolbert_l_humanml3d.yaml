@@ -1,0 +1,38 @@
+# motioncolbert_l_humanml3d -- main results table (Table 2) of the paper.
+defaults:
+  - _self_
+  - dataset: HumanML3D
+
+exp_name: motioncolbert_l_humanml3d
+checkpoints_dir: ./outputs/${exp_name}
+hydra:
+  run:
+    dir: ${checkpoints_dir}
+
+preprocess:
+  padding: true
+
+model:
+  motion_encoder: vit_large_patch16_224
+  text_encoder: roberta-large
+  projection_dims: 256
+
+train:
+  seed: 42
+  batch_size: 128
+  epoch: 60
+  num_workers: 16
+  lr:            # effective learning rates of the three parameter groups
+    motion: 1.0e-4
+    text: 2.0e-5
+    head: 1.0e-4
+  weight_decay: 0.1
+  drop_path_rate: 0.2
+  motion_encoder_pretrained: true   # ImageNet-21k ViT checkpoint from timm
+  patch_size: 16
+  lambda_mlm: 0.2
+  mlm_probability: 0.15
+  mlm_batch_size: 16    # MLM loss on the first 16 captions of each batch
+
+eval:
+  checkpoint: ${checkpoints_dir}/best_model.pt

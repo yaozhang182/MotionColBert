@@ -1,0 +1,7 @@
+dataset_name: HumanML3D
+data_root: ./data/HumanML3D
+joint_angle_dir: ${dataset.data_root}/joint_angle
+text_dir: ${dataset.data_root}/texts
+max_motion_length: 224   # frames; motions are cropped/padded to 224 -> 14 x 14 = 196 patches
+times: 1
+fps: 20

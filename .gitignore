@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+outputs/
+checkpoints/
+*.pt
+# datasets are not redistributed; only the normalization statistics are tracked
+data/*/*
+!data/*/Mean_angle.npy
+!data/*/Std_angle.npy
