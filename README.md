@@ -94,7 +94,7 @@ python scripts/train.py --config-name=motioncolbert_l_kit
 ```
 
 Checkpoints are written to `outputs/<config>/best_model.pt`. Following MoPatch, the checkpoint with the best
-mean (T2M, M2T) R@5 on the test split is kept. All results use seed 42.
+mean (T2M, M2T) R@5 on the test split is kept.
 
 ## Results
 
@@ -111,12 +111,12 @@ These are the numbers reported in Table 2 of the paper. The released MotionColBe
 exactly with `scripts/test.py`.
 
 The original MotionColBert-L checkpoints were lost, so the released MotionColBert-L checkpoints were retrained
-with this repository (same configuration and seed). Training is not bit-wise deterministic (e.g. the random MLM
+with this repository (same configuration). Training is not bit-wise deterministic (e.g. the random MLM
 masking), so their results differ slightly from the paper:
 
 | Dataset | Released checkpoint | T2M R@1 | R@2 | R@3 | R@5 | R@10 | MedR | M2T R@1 | R@2 | R@3 | R@5 | R@10 | MedR |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| HumanML3D | `motioncolbert_l_humanml3d.pt` | 13.76 | 18.98 | 25.65 | 33.72 | 46.87 | 12.0 | 14.86 | 18.82 | 25.61 | 33.26 | 44.17 | 14.0 |
+| HumanML3D | `motioncolbert_l_humanml3d.pt` | 13.63 | 19.59 | 26.15 | 34.57 | 47.28 | 12.0 | 14.27 | 17.86 | 25.42 | 33.08 | 44.90 | 13.0 |
 | KIT-ML    | `motioncolbert_l_kit.pt` | 15.30 | 25.54 | 33.86 | 45.66 | 59.04 | 7.0 | 16.51 | 17.95 | 28.43 | 36.39 | 52.89 | 9.0 |
 
 ## Citation

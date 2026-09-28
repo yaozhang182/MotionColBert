@@ -18,7 +18,7 @@ model:
   projection_dims: 256
 
 train:
-  seed: 42
+  seed: 1
   batch_size: 128
   epoch: 60
   num_workers: 16
