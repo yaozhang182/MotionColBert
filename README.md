@@ -107,17 +107,7 @@ Text-to-motion (T2M) and motion-to-text (M2T) retrieval on the test sets ("All" 
 | KIT-ML    | MotionColBert   | 13.86 | 23.01 | 32.29 | 43.37 | 59.28 | 7.0  | 14.46 | 16.75 | 25.78 | 35.06 | 49.64 | 11.0 |
 | KIT-ML    | MotionColBert-L | 16.27 | 22.77 | 30.60 | 42.65 | 56.39 | 8.0  | 16.02 | 17.71 | 28.80 | 38.80 | 51.33 | 9.0  |
 
-These are the numbers reported in Table 2 of the paper. The released MotionColBert checkpoints reproduce them
-exactly with `scripts/test.py`.
-
-The original MotionColBert-L checkpoints were lost, so the released MotionColBert-L checkpoints were retrained
-with this repository (same configuration). Training is not bit-wise deterministic (e.g. the random MLM
-masking), so their results differ slightly from the paper:
-
-| Dataset | Released checkpoint | T2M R@1 | R@2 | R@3 | R@5 | R@10 | MedR | M2T R@1 | R@2 | R@3 | R@5 | R@10 | MedR |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| HumanML3D | `motioncolbert_l_humanml3d.pt` | 13.63 | 19.59 | 26.15 | 34.57 | 47.28 | 12.0 | 14.27 | 17.86 | 25.42 | 33.08 | 44.90 | 13.0 |
-| KIT-ML    | `motioncolbert_l_kit.pt` | 15.30 | 25.54 | 33.86 | 45.66 | 59.04 | 7.0 | 16.51 | 17.95 | 28.43 | 36.39 | 52.89 | 9.0 |
+These are the numbers reported in Table 2 of the paper.
 
 ## Citation
 
